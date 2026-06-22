@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-black antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: "DM Serif Display", Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 font-semibold text-sm tracking-wide hover:bg-zinc-800 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border border-black text-black px-6 py-3 font-semibold text-sm tracking-wide hover:bg-black hover:text-white transition-colors duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-black text-white px-4 py-2 text-sm font-medium hover:bg-zinc-700 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full border border-zinc-300 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors duration-200 bg-white placeholder:text-zinc-400;
+  }
+
+  .card-shadow {
+    @apply shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-zinc-500;
+  }
+}
